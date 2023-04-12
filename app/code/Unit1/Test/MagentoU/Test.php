@@ -1,24 +1,35 @@
 <?php
 
 namespace Unit1\Test\MagentoU;
-class Test
+use Unit1\Test\Api\TestInterface;
+
+class Test implements TestInterface
 {
     protected $justAParameter;
 
     protected $data;
 
-    protected $unit1ProductRepository;
+    protected $productFactory;
+    protected $session ;
 
     public function __construct(
         \Magento\Catalog\Model\ProductFactory $productFactory,
         \Magento\Checkout\Model\Session $session,
-        \Unit1\Test\Api\ProductRepositoryInterface $unit1ProductRepository,
         $justAParameter = false,
         array $data = []
     ) {
         $this->justAParameter = $justAParameter;
         $this->data = $data;
-        $this->unit1ProductRepository = $unit1ProductRepository;
-        file_put_contents('/application/test.txt', print_r($this->data, true));
+        $this->productFactory = $productFactory;
+        $this->session = $session;
+    }
+    public function test()
+    {
+        var_dump('$this->data', $this->data);
+        var_dump('productFactory->create', get_class($this->productFactory->create()));
+        var_dump('Name', $this->productFactory->create()->setName('Test')->getName());
+        var_dump('Name', $this->productFactory->create(['data' => ['name'=> 'Test name']])->getName());
+        var_dump('session', get_class($this->session));
+        var_dump('$this->justAParameter', $this->justAParameter);
     }
 }

@@ -30,5 +30,12 @@ class Log implements \Magento\Framework\Event\ObserverInterface
         $this->_logger->critical(
             'Request URI: ' . $this->_request->getPathInfo()
         ); // var/log/system.log
+//        $this->_logger->critical(
+//            'MODULE ' . print_r($data = [
+//                'module' => $this->_request->getModuleName(),
+//                'controller' => $this->_request->getControllerName(),
+//                'action' => $this->_request->getActionName(),
+//            ], true)
+//        );
     }
 }

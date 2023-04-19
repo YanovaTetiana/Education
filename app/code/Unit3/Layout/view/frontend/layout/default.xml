@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content.top">
+            <block class="Magento\Framework\View\Element\Template" name="custom_layout"
+                   template="Unit3_Layout::template.phtml" >
+                <arguments>
+                    <argument name="text" xsi:type="string">Some text for all pages</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+        <referenceBlock name="header.links">
+            <block class="Magento\Framework\View\Element\Html\Link" name="test-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Test Link 1</argument>
+                    <argument name="path" xsi:type="string"
+                              translate="true">unit3layout/layout/onepage</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+    </body>
+</page>

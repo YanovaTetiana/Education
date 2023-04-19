@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2019 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="custom_layout">
+            <arguments>
+                <argument name="background_color" xsi:type="string">#f0f0f0</argument>
+                <argument name="color" xsi:type="string">orange</argument>
+                <argument name="text" xsi:type="string">Some text for all pages for product</argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>

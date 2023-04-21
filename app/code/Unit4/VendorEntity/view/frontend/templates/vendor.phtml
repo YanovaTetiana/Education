@@ -1,0 +1,18 @@
+
+<h2>All vendors</h2>
+
+<div>
+    <?php $viewModel = $this->getViewModel(); ?>
+    <?php $vendors = $viewModel->getAllVendors(); ?>
+    <?php foreach ($vendors as $vendor): ?>
+        <div>
+            <h3> <?php echo $vendor->getCode(); ?> </h3>
+            Contact: <?php echo $vendor->getContact(); ?> <br />
+            Type: <?php echo $vendor->getGoodsType(); ?>
+        </div>
+    <?php endforeach; ?>
+</div>
+
+<h2>Vendor 5</h2>
+<?php $vendor5 = $viewModel->getVendor(5); ?>
+<?php echo $vendor5->getCode(); ?>

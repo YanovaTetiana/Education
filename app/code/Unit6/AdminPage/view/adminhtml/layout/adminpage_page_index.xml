@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Template" name="new.page.content"
+                   template="Unit6_AdminPage::index.phtml">
+                <arguments>
+                    <argument name="config" xsi:type="array">
+                        <item name="text_field" xsi:type="string">text field</item>
+                        <item name="custom" xsi:type="string">custom</item>
+                        <item name="test" xsi:type="string">test</item>
+                    </argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

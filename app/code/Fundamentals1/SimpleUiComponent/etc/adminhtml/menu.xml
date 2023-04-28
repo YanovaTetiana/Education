@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Fundamentals1_SimpleUiComponent::simple_list" title="Simple UiComponent"
+             module="Fundamentals1_SimpleUiComponent"
+             parent="Magento_Catalog::catalog"
+             resource="Fundamentals1_SimpleUiComponent::grid"
+             sortOrder="0" action="simple/uicomponent/index"/>
+    </menu>
+</config>

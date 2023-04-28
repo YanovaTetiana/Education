@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+
+    <!-- This technique is only for educational purpose! Don’t use it in production code! -->
+    <htmlContent name="Fundamentals1">
+        <argument name="block" xsi:type="object">Magento\Framework\View\Element\Template</argument>
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="provider" xsi:type="string">fundamentals1_listing.fundamentals1_listing_data_source</item>
+                <item name="component" xsi:type="string">Fundamentals1_JsDataProviderSkeleton/js/data</item>
+                <item name="template" xsi:type="string">Fundamentals1_JsDataProviderSkeleton/index</item>
+            </item>
+        </argument>
+    </htmlContent>
+    <!-- This technique is only for educational purpose! Don’t use it in production code! -->
+
+    <dataSource name="fundamentals1_listing_data_source" component="Magento_Ui/js/grid/provider">
+        <settings>
+            <updateUrl path="mui/index/render"/>
+        </settings>
+        <dataProvider class="Fundamentals1\JsDataProviderSkeleton\Model\DataProvider" name="fundamentals1_listing_data_source">
+            <settings>
+                <requestFieldName>id</requestFieldName>
+                <primaryFieldName>grid_id</primaryFieldName>
+            </settings>
+        </dataProvider>
+    </dataSource>
+</listing>

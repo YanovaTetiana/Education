@@ -1,0 +1,15 @@
+<span>Lists from DataProvider:</span>
+<div id="test_lists">
+    <span data-bind="click: myFunction" >Click me</span>
+</div>
+
+<if args="list">
+    <span>Lists from data.js:</span>
+    <ul>
+        <span data-bind="foreach: { data: list, as: 'list_data' }">
+            <li data-bind="text: list_data.name "></li>
+        </span>
+    </ul>
+</if>
+
+
